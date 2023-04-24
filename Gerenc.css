@@ -1,0 +1,422 @@
+html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-y: visible;
+    position: relative;
+    height: 100vh;
+    width: 100vh;
+    font-family: "Euclid Circular A", "Poppins";
+    color: #222222;
+    width: 100vw;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1180%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c196 C 128%2c239.2 384%2c401.6 640%2c412 C 896%2c422.4 1024%2c254.6 1280%2c248 C 1536%2c241.4 1792%2c352.8 1920%2c379L1920 1080L0 1080z' fill='rgba(254%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c545 C 192%2c615.2 576%2c890 960%2c896 C 1344%2c902 1728%2c639.2 1920%2c575L1920 1080L0 1080z' fill='rgba(61%2c 189%2c 236%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1180'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");   
+  }
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  /*SCROLL BAR*/
+
+::-webkit-scrollbar{
+    width: 10px;
+
+    
+    height: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #dedede;    
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background: #cacaca;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#BFBFBF;
+}
+
+
+  /*NAVBAR*/
+
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+    transition: .5s;
+  }
+
+  /*NAAAAAAVBAR*/
+	nav{
+    position: fixed;
+       z-index: 1;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 75px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 0 24px 0 16px;
+       background:#fff;
+       box-shadow: 0 0 20px rgb(0 0 0 / 8%);
+       font-size: 20px;
+       justify-content: space-between;
+   }
+
+   li a:hover{
+    opacity: 1.5;
+   }
+    ul {
+       list-style: none;
+       margin: 0;
+       display: flex;
+       justify-content: space-between;
+
+     }
+    
+   li{
+      display: block;
+       position: relative;
+       margin-left: 60px;
+       justify-content: space-between;
+   }
+.img-menu{
+  margin-top: 5px;
+}
+.img-menu:hover{
+  background-color: #e5e5e5e5;
+  border-radius: 10px;
+}
+
+
+      /* The side navigation menu */
+         .sidenav {
+             height: 100%; /* 100% Full-height */
+             width: 0; /* 0 width - change this with JavaScript */
+             position: fixed; /* Stay in place */
+             z-index: 1; /* Stay on top */
+             top: 0;
+             background-color: #1F2B5B; /* Black*/
+             overflow-x: hidden; /* Disable horizontal scroll */
+             padding-top: 60px; /* Place content 60px from the top */
+             transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+         }
+   
+         /* The navigation menu links */
+         .sidenav a {
+             padding: 8px 8px 8px 32px;
+             text-decoration: none;
+             font-size: 20px;
+             color: #818181;
+             display: block;
+             transition: 0.3s
+         }
+   
+         /* When you mouse over the navigation links, change their color */
+         .sidenav a:hover, .offcanvas a:focus{
+             color: #f1f1f1;
+         }
+   
+         /* Position and style the close button (top right corner) */
+         .sidenav .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+         }
+   
+         /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+         #main {
+             transition: margin-left .5s;
+             padding: 20px;
+         }
+         .sidenav {
+             right: 0;
+         }
+         /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+         @media screen and (max-height: 450px) {
+             .sidenav {padding-top: 15px;}
+             .sidenav a {font-size: 18px;}
+         }
+         .sidenav {
+             right: 0;
+         }
+
+
+
+
+  /*SECTION*/
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0px;
+    
+  }
+
+  /*FOOTER*/
+ 
+footer {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222222;
+    color: #fff;
+    margin: 0;
+    height: 200px;
+  }
+  
+  footer .logo {
+    height: 60px;
+    width: 60px;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+  }
+  
+  footer .logo img {
+width: 50px;
+height: 50px;
+    border-radius: 100%;
+
+  }
+  
+  footer .social {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .center{
+    text-align: center;
+    justify-content: center;
+    margin-left: 100px;
+  }
+  footer .social a {
+    margin-left: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    
+  }
+  
+  footer .social a:hover {
+    color: #7597de;
+  }
+  svg{
+   margin-top: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Button back to top*/
+.backtotop {
+    display: none;
+    cursor: pointer;
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    border: none;
+  }
+/*HEADER*/
+
+.banner,
+h1,
+button {
+  transition: 0.6s;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url("foto2.png");
+  background-size: 180%;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.banner h1 {
+  font-size: 50px;
+  color: #f9f9f9;
+}
+
+.banner button {
+  padding: 12px 36px;
+  border-radius: 50px;
+  border: 0;
+  background: #221e6f;
+  color: #f9f9f9;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+
+@media screen and (max-width:600px){
+img{
+max-width: 50px;
+margin-left: -110px;
+}
+
+a{
+  font-size: 20px;
+}
+
+
+
+
+
+.img-menu{
+  margin-left: 1px;
+}
+
+}
+  
+.conta{
+margin-top: 130%;
+margin-left: 30px;
+}
+.des{
+  margin-left: 50px;
+}
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 190px;
+ }
+ 
+ .input {
+  width: 300px;
+  height: 40px;
+  line-height: 5px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  outline: none;
+  background-color: #fff;
+  color: #0d0c22;
+  transition: .3s ease;
+  margin-top: 10px;
+  border-color: #222222;
+ }
+ 
+ .input::placeholder {
+  color: #909091;
+ }
+ 
+ 
+ 
+ .icon {
+  position: absolute;
+  left: 1rem;
+  fill: #222222;
+  width: 1rem;
+  height: 1rem;
+ }
+ 
+/*LOGO*/
+
+.logo{
+  width: 200px;
+  height: 200px;
+}
+ 
+ 
+ 
+ .table{
+    margin-bottom: 600px;
+    border: 5px black;
+    text-align: center;
+    justify-content: center;
+    margin-left: 250px;
+ }
+
+
+
+ /*TABLE*/
+ table { 
+	width: 1400px; 
+	border-collapse: collapse; 
+  text-align: center;
+  justify-content: center;
+;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #1F2B5B; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+header{
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.bnt-prod{
+  background-color: #BFBFBF;
+  border: none;
+  border-radius: 5px;
+  color:#222222;
+  width: 75px;
+  height: 35px;
+  margin-left: 25px;
+}
+.bnt-prod:active {
+  border: 2px solid white;
+}
+
+

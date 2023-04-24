@@ -1,0 +1,249 @@
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Euclid Circular A", "Poppins";
+height: 100vh;
+    margin: 0;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1180%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c196 C 128%2c239.2 384%2c401.6 640%2c412 C 896%2c422.4 1024%2c254.6 1280%2c248 C 1536%2c241.4 1792%2c352.8 1920%2c379L1920 1080L0 1080z' fill='rgba(254%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c545 C 192%2c615.2 576%2c890 960%2c896 C 1344%2c902 1728%2c639.2 1920%2c575L1920 1080L0 1080z' fill='rgba(61%2c 189%2c 236%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1180'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+}
+
+h1 {
+	font-weight: bold;	
+	margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+    
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.button {
+	border-radius: 20px;
+	border: 1px solid #1F2B5B;
+	background: linear-gradient(to bottom right,#3DBDEC,#1F2B5B);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button:active {
+	transform: scale(0.95);
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.linput {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 10px 0;
+	width: 35%;
+    
+}
+
+
+
+.sign-in-container {
+    left: 500px	;
+    text-align: center;
+        width: 100%;
+        z-index: 5;
+    }
+    
+	.login{
+		background: url(image/user.png);
+		background-repeat: no-repeat;
+		background-size: 30px;
+		background-position: right;
+	background-position-x: 99%;
+	}
+	.senha{
+		background: url(image/lock.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	.esq{
+		margin-bottom: 5px;
+	}
+	
+	.mail{
+		background: url(image/mail.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	.date{background: url(image/calendar.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;}
+	.cpf{
+		background: url(image/hash.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;}
+		
+	
+	.tele{
+		background: url(image/phone.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	
+	.home{
+		background: url(image/home.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	
+	.compass{
+		background: url(image/compass.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	
+	.map{
+		background: url(image/map.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	.map-pin{
+		background: url(image/map-pin.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	
+	.shield{
+		background: url(image/shield.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+
+	.box{
+		background: url(image/box.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+
+	.archive{
+		background: url(image/archive.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+
+	.book{
+		background: url(image/book-open.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+
+	.case{
+		background: url(image/briefcase.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+	
+	.pack{
+		background: url(image/package.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+
+	.inbox{
+		background: url(image/inbox.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}
+
+	.user-check{
+		background: url(image/user-check.png);
+		background-repeat: no-repeat;	
+		background-size: 30px;
+		background-position: right;
+		background-position-x: 99%;
+	}

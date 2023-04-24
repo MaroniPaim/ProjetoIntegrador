@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gerenc.css">
+<link rel="stylesheet" href="cadfuncionario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="image/mini-logo.png" type="image">
+    <link rel="stylesheet" href="script.js">
+    <title>Farmax</title>
+</head>
+<body>
+    <button class="btn backtotop"><svg width="50" height="50" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="1 4 22 22" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5"></path>
+        <path d="m5 12 7-7 7 7"></path>
+      </svg>
+        <path d="m5 12 7-7 7 7"></path>
+      </svg></button>
+    <nav>
+      <ul>
+<li><a href="TelaAdm.html"><img class="logo" src="image/logo.png" alt="Logo"></a></li>    
+</ul>
+  <ul><li><div class="group">
+    <svg class="icon" aria-hidden="true" viewBox="0 2 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+    <input placeholder="Procurando algo?" type="search" class="input">
+  </div></li>
+          <li><span onclick="openNav()" class="nav btn-nav" ><img src="image/align-justify.png" class="img-menu"></span></li>
+          <li><div id="mySidenav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       
+       <a href="GerencFunc.html">Gerenciamento de Funcionários</a>
+       <a href="GerencCliente.html">Gerenciamento de Clientes</a>
+       <a href="GerencProd.html">Gerenciamento de Produtos</a>
+       <a href="GerencNota.html">Gerenciamento de Nota Fiscal</a>
+       <div class="conta">
+       <a href="#" ><svg width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="3 0 23 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <path d="M12 3a4 4 0 1 0 0 8 4 4 0 1 0 0-8z"></path>
+      </svg>Sua Conta</a>
+      <a class="des" href="login.html">Deslogar</a>
+    </div>
+     </div>
+    </ul>
+       
+       </nav>
+     
+<main>
+
+  <div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form action="#">
+      <h1>Editar Clientes</h1>
+      <input type="text" placeholder="ID" class="login linput" required/> 
+      <input type="text" placeholder="Nome Completo" class="login linput" required/> 
+			<input type="email" placeholder="Email" class="mail linput" required/>
+            <input id="CPFInput" maxlength="11" oninput="criaMascara('CPF')" placeholder="CPF" class="cpf linput"required>
+            <input type="text" class="js-date date linput" maxlength="10" placeholder="Data de Nascimento" required/>
+            <input id="CelularInput" maxlength="11" oninput="criaMascara('Celular')" placeholder="Telefone" class="tele linput" required>
+            <input type="text" placeholder="Cidade" required class="map linput"/>
+            <input type="text" placeholder="Bairro" required class="compass linput"/>
+            <input type="text" placeholder="Rua" required class="map-pin linput"/>
+            <input type="text" placeholder="Número da Residência" class="home linput"required/>
+<Br>
+			<button class="button"type="submit">Editar</button>
+      <button class="button"type="submit" style="margin-left: 20px;">Buscar</button>
+		</form>
+	</div>
+</div>
+
+      </main>
+
+
+</body>
+<script>
+const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+
+    });
+    
+    /*CPF*/
+    function criaMascara(mascaraInput) {
+  const maximoInput = document.getElementById(`${mascaraInput}Input`).maxLength;
+  let valorInput = document.getElementById(`${mascaraInput}Input`).value;
+  let valorSemPonto = document.getElementById(`${mascaraInput}Input`).value.replace(/([^0-9])+/g, "");
+  const mascaras = {
+    CPF: valorInput.replace(/[^\d]/g, "").replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"),
+    Celular: valorInput.replace(/[^\d]/g, "").replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"),
+    CEP: valorInput.replace(/[^\d]/g, "").replace(/(\d{5})(\d{3})/, "$1-$2"),
+    CNJ: valorInput.replace(/[^\d]/g, "").replace(/(\d{7})(\d{2})(\d{4})(\d{1})(\d{2})(\d{4})/, "$1-$2.$3.$4.$5.$6"),
+  };
+
+  valorInput.length === maximoInput ? document.getElementById(`${mascaraInput}Input`).value = mascaras[mascaraInput]
+ : document.getElementById(`${mascaraInput}Input`).value = valorSemPonto;
+};
+
+/*DATE*/
+
+var input = document.querySelectorAll('.js-date')[0];
+  
+var dateInputMask = function dateInputMask(elm) {
+  elm.addEventListener('keypress', function(e) {
+    if(e.keyCode < 47 || e.keyCode > 57) {
+      e.preventDefault();
+    }
+    
+    var len = elm.value.length;
+    
+    // If we're at a particular place, let the user type the slash
+    // i.e., 12/12/1212
+    if(len !== 1 || len !== 3) {
+      if(e.keyCode == 47) {
+        e.preventDefault();
+      }
+    }
+    
+    // If they don't add the slash, do it for them...
+    if(len === 2) {
+      elm.value += '/';
+    }
+
+    // If they don't add the slash, do it for them...
+    if(len === 5) {
+      elm.value += '/';
+    }
+  });
+};
+  
+dateInputMask(input);
+
+const button = document.querySelector('.btn');
+
+const displayButton = () => {
+  window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+  
+    if (window.scrollY > 100) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  });
+};
+
+const scrollToTop = () => {
+  button.addEventListener("click", () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    }); 
+    console.log(event);
+  });
+};
+/*NAVBAR*/
+/* Simple appearence with animation AN-1*/
+function openNav() {
+	    document.getElementById("mySidenav").style.width = "300px";
+	}
+	function closeNav() {
+	    document.getElementById("mySidenav").style.width = "0";
+	}
+	/* Simple appearence with animation AN-1*/
+displayButton();
+scrollToTop();
+</script>
+</html>
